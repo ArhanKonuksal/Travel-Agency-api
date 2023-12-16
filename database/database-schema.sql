@@ -36,3 +36,36 @@ CREATE TABLE users(
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (user_type_id) REFERENCES user_types(user_type_id)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+DROP TABLE IF EXISTS ;
+CREATE TABLE Destinations (
+    Destination_id  int AUTO_INCREMENT  PRIMARY KEY,
+    Destination_Name VARCHAR(50) NOT NULL,
+    Destination_Location VARCHAR(50) NOT NULL,
+    Description TEXT,
+    Price DECIMAL(10, 2)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+DROP TABLE IF EXISTS Customers;
+CREATE TABLE Customers(
+    Customer_id  int AUTO_INCREMENT  PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+  phone_number VARCHAR(30) NOT NULL
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+DROP TABLE IF EXISTS Bookings;
+CREATE TABLE Bookings(
+      BookingID int AUTO_INCREMENT PRIMARY KEY,
+    Customer_id int NOT NULL,
+    Destination_ID int NOT NULL,
+    Booking_Date DATE,
+    Departure_Date DATE,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (DestinationID) REFERENCES Destinations(DestinationID)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+
+
+
