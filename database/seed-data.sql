@@ -46,11 +46,11 @@ VALUES ("Jack", "Smith", "jacksmith@gmail.com", "07934597393");
 
 
 
-INSERT INTO Bookings (Customer_id, Destination_id, Booking_Date, Departure_Date)
+INSERT INTO Bookings (Customer_id, Destinations_id, Booking_Date, Departure_Date)
 VALUES (1, 1, "2023-06-10", "2023-06-20");
-INSERT INTO Bookings (Customer_id, Destination_id, Booking_Date, Departure_Date)
+INSERT INTO Bookings (Customer_id, Destinations_id, Booking_Date, Departure_Date)
 VALUES (2, 2, "2023-08-15", "2023-08-25");
-INSERT INTO Bookings (Customer_id, Destination_id, Booking_Date, Departure_Date)
+INSERT INTO Bookings (Customer_id, Destinations_id, Booking_Date, Departure_Date)
 VALUES (3, 3, "2023-05-26", "2023-09-07");
-INSERT INTO Bookings (Customer_id, Destination_id, Booking_Date, Departure_Date)
+INSERT INTO Bookings (Customer_id, Destinations_id, Booking_Date, Departure_Date)
 VALUES (4, 4, "2023-03-12", "2023-07-16");
