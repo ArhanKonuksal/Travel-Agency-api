@@ -45,7 +45,10 @@ INSERT INTO Customers (first_name, last_name, email, phone_number)
 VALUES ("Jack", "Smith", "jacksmith@gmail.com", "07934597393");
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4afddb5228d190f2ab927d734813f610a7c888a1
 INSERT INTO Bookings (Customer_id, Destinations_id, Booking_Date, Departure_Date)
 VALUES (1, 1, "2023-06-10", "2023-06-20");
 INSERT INTO Bookings (Customer_id, Destinations_id, Booking_Date, Departure_Date)

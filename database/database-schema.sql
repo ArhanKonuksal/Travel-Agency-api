@@ -39,7 +39,11 @@ CREATE TABLE users(
 
 
 CREATE TABLE Destinations (
+<<<<<<< HEAD
     Destinations_id  int AUTO_INCREMENT  PRIMARY KEY,
+=======
+    Destinations_id int AUTO_INCREMENT PRIMARY KEY,
+>>>>>>> 4afddb5228d190f2ab927d734813f610a7c888a1
     Destination_Name VARCHAR(50) NOT NULL,
     Destination_Location VARCHAR(50) NOT NULL,
     Description TEXT,
@@ -48,7 +52,7 @@ CREATE TABLE Destinations (
 
 DROP TABLE IF EXISTS Customers;
 CREATE TABLE Customers(
-    Customer_id  int AUTO_INCREMENT  PRIMARY KEY,
+    Customer_id  int AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL,
@@ -67,5 +71,5 @@ CREATE TABLE Bookings(
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 
-
+hello
 
