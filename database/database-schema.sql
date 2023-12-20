@@ -39,7 +39,6 @@ CREATE TABLE users(
 
 
 CREATE TABLE Destinations (
-    Destinations_id  int AUTO_INCREMENT  PRIMARY KEY,
     Destinations_id int AUTO_INCREMENT PRIMARY KEY,
     Destination_Name VARCHAR(50) NOT NULL,
     Destination_Location VARCHAR(50) NOT NULL,
@@ -58,7 +57,7 @@ CREATE TABLE Customers(
 
 DROP TABLE IF EXISTS Bookings;
 CREATE TABLE Bookings(
-    BookingID int AUTO_INCREMENT PRIMARY KEY,
+    Booking_id int AUTO_INCREMENT PRIMARY KEY,
     Customer_id int NOT NULL,
     Destinations_id int NOT NULL,
     Booking_Date DATE,
@@ -68,13 +67,11 @@ CREATE TABLE Bookings(
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 CREATE TABLE Packages (
-    package_id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(255) NOT NULL,
-    description TEXT,
-    price DECIMAL(10, 2) NOT NULL,
-    days INT NOT NULL,
+    Packages_id int AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    description VARCHAR(150) NOT NULL,
+    Price double (10,2),
+    days int NOT NULL,
     destination VARCHAR(255) NOT NULL,
-    package_type VARCHAR(255) NOT NULL,
-    FOREIGN KEY (Destination_Location) REFERENCES Destinations(Destination_Location),
-);
-
+    package_type VARCHAR(255) NOT NULL
+); ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
