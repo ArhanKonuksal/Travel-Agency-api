@@ -8,6 +8,7 @@ const authorise = require("./middlewares/authorisation");
 const getUserTypes = require("./controllers/users/userTypes");
 const { ADMIN } = require("~root/constants/userTypes");
 const getAllCustomers = require("./controllers/Customers/getAllCustomers");
+const getAllDestinations = require("./controllers/Destinations/getAllDestinations");
 
 const router = express.Router();
 
@@ -26,5 +27,7 @@ router.get("/user-types", getUserTypes);
 // Customers
 
 router.get("/Customers", getAllCustomers);
+
+router.get("/Destinations", getAllDestinations);
 
 module.exports = router;
