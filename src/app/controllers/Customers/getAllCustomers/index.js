@@ -3,9 +3,9 @@ const handleAPIError = require("~root/utils/handleAPIError");
 
 const getAllCustomers = async (req, res) => {
   try {
-    const { Customers } = await fetchAllCustomers();
+    const { customers } = await fetchAllCustomers();
     res.status(201).send({
-      Customers
+      customers
     });
   } catch (err) {
     handleAPIError(res, err);

@@ -38,46 +38,43 @@ CREATE TABLE users(
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 
-CREATE TABLE Destinations (
-    Destinations_id int AUTO_INCREMENT PRIMARY KEY,
-    Destination_Name VARCHAR(50) NOT NULL,
-    Destination_Location VARCHAR(50) NOT NULL,
-    Description TEXT,
-    Price DECIMAL(10, 2)
+CREATE TABLE destinations (
+    destination_id int AUTO_INCREMENT PRIMARY KEY,
+    destination_name VARCHAR(50) NOT NULL,
+    destination_location VARCHAR(50) NOT NULL,
+    description VARCHAR(150) NOT NULL,
+    price DECIMAL(10, 2)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS Customers;
-CREATE TABLE Customers(
-    Customer_id  int AUTO_INCREMENT PRIMARY KEY,
+DROP TABLE IF EXISTS customers;
+CREATE TABLE customers(
+    customer_id  int AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL,
   phone_number VARCHAR(30) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS Bookings;
-CREATE TABLE Bookings(
-    Booking_id int AUTO_INCREMENT PRIMARY KEY,
-    Customer_id int NOT NULL,
-    Destinations_id int NOT NULL,
-    Booking_Date DATE,
-    Departure_Date DATE,
-    FOREIGN KEY (Customer_id) REFERENCES Customers(Customer_id),
-    FOREIGN KEY (Destinations_id) REFERENCES Destinations(Destinations_id)
+DROP TABLE IF EXISTS bookings;
+CREATE TABLE bookings(
+    booking_id int AUTO_INCREMENT PRIMARY KEY,
+    customer_id int NOT NULL,
+    destination_id int NOT NULL,
+    booking_date DATE,
+    departure_date DATE,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+    FOREIGN KEY (destination_id) REFERENCES destinations(destination_id)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-<<<<<<< HEAD
-CREATE TABLE Packages (
-    Packages_id int AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE packages (
+    packages_id int AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
     description VARCHAR(150) NOT NULL,
-    Price double (10,2),
+    price DECIMAL(10, 2),
     days int NOT NULL,
     destination VARCHAR(255) NOT NULL,
     package_type VARCHAR(255) NOT NULL
-); ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
-=======
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 
 
->>>>>>> ce33903 (CustomerbyId ve postCustomer)

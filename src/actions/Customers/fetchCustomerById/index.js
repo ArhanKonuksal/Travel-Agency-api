@@ -1,9 +1,9 @@
 const selectCustomerById = require("./queries/selectCustomerById");
 
-const fetchCustomerById = async ({ CustomerId }) => {
-  const Customer = await selectCustomerById({ CustomerId });
+const fetchCustomerById = async ({ customerId }) => {
+  const customer = await selectCustomerById({ customerId });
 
-  return { Customer };
+  return { customer };
 };
 
 module.exports = fetchCustomerById;

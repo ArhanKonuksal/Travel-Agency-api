@@ -1,9 +1,9 @@
 const selectAllCustomers = require("./queries/selectAllCustomer");
 
 const fetchAllCustomers = async () => {
-  const Customers = await selectAllCustomers();
+  const customers = await selectAllCustomers();
 
-  return { Customers };
+  return { customers };
 };
 
 module.exports = fetchAllCustomers;
