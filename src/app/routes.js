@@ -27,6 +27,7 @@ router.get("/user-types", getUserTypes);
 // Customers
 
 router.get("/Customers", getAllCustomers);
+router.get("/Customer/getCustomerById", getCustomerById);
 
 router.get("/Destinations", getAllDestinations);
 
