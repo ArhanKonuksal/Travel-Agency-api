@@ -8,6 +8,8 @@ const authorise = require("./middlewares/authorisation");
 const getUserTypes = require("./controllers/users/userTypes");
 const { ADMIN } = require("~root/constants/userTypes");
 const getAllCustomers = require("./controllers/Customers/getAllCustomers");
+const getCustomerById = require("./controllers/Customers/getCustomerById");
+const postCustomer = require("./controllers/Customers/postCustomer");
 const getAllDestinations = require("./controllers/Destinations/getAllDestinations");
 
 const router = express.Router();
@@ -28,6 +30,9 @@ router.get("/user-types", getUserTypes);
 
 router.get("/Customers", getAllCustomers);
 router.get("/Customer/getCustomerById", getCustomerById);
+router.post("/Customer/postCustomer", postCustomer);
+
+// Desinations
 
 router.get("/Destinations", getAllDestinations);
 

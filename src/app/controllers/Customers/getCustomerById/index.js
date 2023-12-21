@@ -1,15 +1,18 @@
 const fetchCustomerById = require("~root/actions/Customers/fetchCustomerById");
 const handleAPIError = require("~root/utils/handleAPIError");
 
-const getCustomerBy_id = async (req, res) => {
-  const { Customer_id } = req.params;
+const getCustomerById = async (req, res) => {
+  const { CustomerId } = req.params;
   try {
     const { Customer } = await fetchCustomerById({
-      Customer_id
+      CustomerId
+    });
+    res.status(201).send({
+      Customer
     });
   } catch (err) {
     handleAPIError(res, err);
   }
 };
 
-module.exports = getCustomerBy_id;
+module.exports = getCustomerById;

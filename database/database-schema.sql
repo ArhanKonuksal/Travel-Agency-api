@@ -66,6 +66,7 @@ CREATE TABLE Bookings(
     FOREIGN KEY (Destinations_id) REFERENCES Destinations(Destinations_id)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
 CREATE TABLE Packages (
     Packages_id int AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
@@ -75,3 +76,8 @@ CREATE TABLE Packages (
     destination VARCHAR(255) NOT NULL,
     package_type VARCHAR(255) NOT NULL
 ); ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
+=======
+
+
+
+>>>>>>> ce33903 (CustomerbyId ve postCustomer)
