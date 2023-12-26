@@ -1,11 +1,13 @@
+const modifyCustomerById = require("~root/actions/Customers/modifyCustomerById");
 const handleAPIError = require("~root/utils/handleAPIError");
-const createCustomer = require("~root/actions/Customers/createCustomer");
 
-const postCustomer = async (req, res) => {
+const patchCustomerById = async (req, res) => {
+  const { customerId } = req.params;
   const { firstName, lastName, eMail, phoneNumber } = req.body;
 
   try {
-    const { customerId } = await createCustomer({
+    const { customer } = await modifyCustomerById({
+      customerId,
       firstName,
       lastName,
       eMail,
@@ -13,11 +15,11 @@ const postCustomer = async (req, res) => {
     });
 
     res.status(201).send({
-      customerId
+      customer
     });
   } catch (err) {
     handleAPIError(res, err);
   }
 };
 
-module.exports = postCustomer;
+module.exports = patchCustomerById;

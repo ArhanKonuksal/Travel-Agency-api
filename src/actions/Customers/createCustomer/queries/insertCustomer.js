@@ -6,7 +6,20 @@ const insertCustomer = ({
   eMail,
   phoneNumber
 }) => submitQuery`
-INSERT INTO artists( firstName, lastName, eMail, phoneNumber)
-VALUE( ${firstName}, ${lastName}, ${eMail}, ${phoneNumber});
+  INSERT INTO customers
+  (
+    first_name,
+    last_name,
+    email,
+    phone_number
+  )
+  VALUES
+  (
+    ${firstName},
+    ${lastName},
+    ${eMail},
+    ${phoneNumber}
+  )
 `;
+
 module.exports = getInsertId(insertCustomer);

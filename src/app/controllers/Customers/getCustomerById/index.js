@@ -14,5 +14,4 @@ const getCustomerById = async (req, res) => {
     handleAPIError(res, err);
   }
 };
-
 module.exports = getCustomerById;

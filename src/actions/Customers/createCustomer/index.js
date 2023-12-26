@@ -1,13 +1,13 @@
 const insertCustomer = require("./queries/insertCustomer");
 
 const createCustomer = async ({ firstName, lastName, eMail, phoneNumber }) => {
-  const CustomerId = await insertCustomer({
+  const customerId = await insertCustomer({
     firstName,
     lastName,
     eMail,
     phoneNumber
   });
-  return { CustomerId };
+  return { customerId };
 };
 
 module.exports = createCustomer;

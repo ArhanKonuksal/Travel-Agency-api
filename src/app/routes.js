@@ -10,6 +10,8 @@ const { ADMIN } = require("~root/constants/userTypes");
 const getAllCustomers = require("./controllers/Customers/getAllCustomers");
 const getCustomerById = require("./controllers/Customers/getCustomerById");
 const postCustomer = require("./controllers/Customers/postCustomer");
+const deleteCustomerById = require("./controllers/Customers/deleteCustomerById");
+const patchCustomerById = require("./controllers/Customers/patchCustomerById");
 
 const router = express.Router();
 
@@ -28,8 +30,14 @@ router.get("/user-types", getUserTypes);
 // Customers
 
 router.get("/Customers", getAllCustomers);
-router.get("/Customer/:getCustomerById", getCustomerById);//abi bunları fixle
-router.post("/Customer/postCustomer", postCustomer);//sana şimdi oyun oynarken anlatacam
+
+router.get("/Customer/:customerId", getCustomerById);
+
+router.post("/Customer", postCustomer);
+
+router.patch("/Customer/:customerId", patchCustomerById);
+
+router.delete("/Customer/:customerId", deleteCustomerById);
 
 // Desinations
 
