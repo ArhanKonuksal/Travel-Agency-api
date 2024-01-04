@@ -66,14 +66,15 @@ CREATE TABLE bookings(
     FOREIGN KEY (destination_id) REFERENCES destinations(destination_id)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-CREATE TABLE packages (
-    packages_id int AUTO_INCREMENT PRIMARY KEY,
+DROP  TABLE IF EXISTS inclusive;
+CREATE TABLE  inclusive(
+    inclusive_id int AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
     description VARCHAR(150) NOT NULL,
     price DECIMAL(10, 2),
     days int NOT NULL,
     destination VARCHAR(255) NOT NULL,
-    package_type VARCHAR(255) NOT NULL
+    inclusive_type VARCHAR(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 

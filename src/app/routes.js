@@ -12,6 +12,9 @@ const getCustomerById = require("./controllers/Customers/getCustomerById");
 const postCustomer = require("./controllers/Customers/postCustomer");
 const deleteCustomerById = require("./controllers/Customers/deleteCustomerById");
 const patchCustomerById = require("./controllers/Customers/patchCustomerById");
+const getAllInclusive = require("./controllers/Inclusive/getAllInclusive");
+const getInclusiveById = require("./controllers/Inclusive/getInclusiveById");
+const postInclusive = require("./controllers/Inclusive/postInclusive");
 
 const router = express.Router();
 
@@ -40,5 +43,13 @@ router.patch("/Customer/:customerId", patchCustomerById);
 router.delete("/Customer/:customerId", deleteCustomerById);
 
 // Desinations
+
+// inclusive
+
+router.get("/Inclusive", getAllInclusive);
+
+router.get("/Inclusive/:inclusiveId", getInclusiveById);
+
+router.post("/Inclusive", postInclusive);
 
 module.exports = router;
