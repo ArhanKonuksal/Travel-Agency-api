@@ -15,6 +15,11 @@ const patchCustomerById = require("./controllers/Customers/patchCustomerById");
 const getAllInclusive = require("./controllers/Inclusive/getAllInclusive");
 const getInclusiveById = require("./controllers/Inclusive/getInclusiveById");
 const postInclusive = require("./controllers/Inclusive/postInclusive");
+const getAllDestinations = require("./controllers/Destinations/getAllDestinations");
+const getDestinationById = require("./controllers/Destinations/getDestinationById");
+const deleteDestinationById = require("./controllers/Destinations/deleteDestinationById");
+const patchDestinationById = require("./controllers/Destinations/patchDestinationById");
+const postDestination = require("./controllers/Destinations/postDestination");
 
 const router = express.Router();
 
@@ -43,6 +48,15 @@ router.patch("/Customer/:customerId", patchCustomerById);
 router.delete("/Customer/:customerId", deleteCustomerById);
 
 // Desinations
+router.get("/Destinations", getAllDestinations);
+
+router.get("/Destination/:destinationId", getDestinationById);
+
+router.delete("/Destination/:destinationId", deleteDestinationById);
+
+router.patch("/Destination/:destinationId", patchDestinationById);
+
+router.post("/Destination", postDestination);
 
 // inclusive
 
