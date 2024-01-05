@@ -38,7 +38,7 @@ CREATE TABLE users(
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 
-CREATE TABLE destinations (
+CREATE TABLE destinations(
     destination_id int AUTO_INCREMENT PRIMARY KEY,
     destination_name VARCHAR(50) NOT NULL,
     destination_location VARCHAR(50) NOT NULL,

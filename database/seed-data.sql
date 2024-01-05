@@ -25,19 +25,35 @@ INSERT INTO users (user_id, first_name, last_name, email, password, user_type_id
 VALUES (3, "Jim", "Bloggs" , "jimbloggs@yahoo.com", SHA2(CONCAT("password","SUPER_DUPER_SECRET"), 224), 2, "2020-11-20 12:00:00");
 
 
-
+INSERT INTO destinations (destination_name, destination_location, description, price)
+VALUES ("Paris", "France", "The City of Love", 1500.00);
 
 INSERT INTO destinations (destination_name, destination_location, description, price)
-VALUES ("Paris", "France", "The City of Love", 1500.00),
-       ("Amsterdam", "Netherlands", "The City of Canals", 1700.00),
-       ("Rome", "Italy", "The City of Gladiators", 1600.50),
-       ("New York", "America", "Big Apple", 2499.99),
-       ("Barcelona", "Spain", "Home of Architecture", 1300.80),
-       ("Tokyo", "Japan", "The Land of the Rising Sun", 1800.25),
-       ("Sydney", "Australia", "Harbor City", 2000.75),
-       ("Rio de Janeiro", "Brazil", "The Marvelous City", 1450.60),
-       ("Dubai", "United Arab Emirates", "City of Skyscrapers", 2200.40),
-       ("Cape Town", "South Africa", "Mother City", 1750.90);
+VALUES ("Amsterdam", "Netherlands", "The City of Canals", 1700.00);
+
+INSERT INTO destinations (destination_name, destination_location, description, price)
+VALUES("Rome", "Italy", "The City of Gladiators", 1600.50);
+
+INSERT INTO destinations (destination_name, destination_location, description, price)
+VALUES("New York", "America", "Big Apple", 2499.99);
+
+INSERT INTO destinations (destination_name, destination_location, description, price)
+VALUES("Barcelona", "Spain", "Home of Architecture", 1300.80);
+
+INSERT INTO destinations (destination_name, destination_location, description, price)
+VALUES("Tokyo", "Japan", "The Land of the Rising Sun", 1800.25);
+
+INSERT INTO destinations (destination_name, destination_location, description, price)
+VALUES("Sydney", "Australia", "Harbor City", 2000.75);
+
+INSERT INTO destinations (destination_name, destination_location, description, price)
+VALUES("Rio de Janeiro", "Brazil", "The Marvelous City", 1450.60);
+
+INSERT INTO destinations (destination_name, destination_location, description, price)
+VALUES("Dubai", "United Arab Emirates", "City of Skyscrapers", 2200.40);
+
+INSERT INTO destinations (destination_name, destination_location, description, price)
+VALUES("Cape Town", "South Africa", "Mother City", 1750.90);
 
 
 INSERT INTO customers (first_name, last_name, email, phone_number)
@@ -89,10 +105,10 @@ INSERT INTO inclusive (name, description, price, days, destination, inclusive_ty
 VALUES ('Cultural Experience', 'Discover the Rich Heritage of Rome', 1800.75, 4, 'Italy', 'Culture');
 
 INSERT INTO inclusive (name, description, price, days, destination, inclusive_type )
-VALUES     ('City Explorer', 'Experience the Bustle of New York City', 3000.99, 6, 'America', 'City');
+VALUES ('City Explorer', 'Experience the Bustle of New York City', 3000.99, 6, 'America', 'City');
 
 INSERT INTO inclusive (name, description, price, days, destination, inclusive_type )
 VALUES ('Beach Retreat', 'Relax on the Beautiful Beaches of Sydney', 2200.80, 8, 'Australia', 'Beach');
 
 INSERT INTO inclusive (name, description, price, days, destination, inclusive_type )
- VALUES  ('Architectural Tour', 'Marvel at the Wonders of Barcelona', 1500.25, 3, 'Spain', 'Culture');
+VALUES ('Architectural Tour', 'Marvel at the Wonders of Barcelona', 1500.25, 3, 'Spain', 'Culture');

@@ -20,6 +20,8 @@ const getDestinationById = require("./controllers/Destinations/getDestinationByI
 const deleteDestinationById = require("./controllers/Destinations/deleteDestinationById");
 const patchDestinationById = require("./controllers/Destinations/patchDestinationById");
 const postDestination = require("./controllers/Destinations/postDestination");
+const patchInclusiveById = require("./controllers/Inclusive/patchInclusiveById");
+const deleteInclusiveById = require("./controllers/Inclusive/deleteInclusiveById");
 
 const router = express.Router();
 
@@ -60,10 +62,14 @@ router.post("/Destination", postDestination);
 
 // inclusive
 
-router.get("/Inclusive", getAllInclusive);
+router.get("/Inclusives", getAllInclusive);
 
 router.get("/Inclusive/:inclusiveId", getInclusiveById);
 
 router.post("/Inclusive", postInclusive);
+
+router.patch("/Inclusive/:inclusiveId", patchInclusiveById);
+
+router.delete("Inclusive/:inclusiveId", deleteInclusiveById);
 
 module.exports = router;
