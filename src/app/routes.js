@@ -22,6 +22,10 @@ const patchDestinationById = require("./controllers/Destinations/patchDestinatio
 const postDestination = require("./controllers/Destinations/postDestination");
 const patchInclusiveById = require("./controllers/Inclusive/patchInclusiveById");
 const deleteInclusiveById = require("./controllers/Inclusive/deleteInclusiveById");
+const postBooking = require("./controllers/Bookings/postBooking");
+const deleteBookingById = require("./controllers/Bookings/deleteBookingById");
+const getBookingById = require("./controllers/Bookings/getBookingById");
+const patchBookingById = require("./controllers/Bookings/patchBookingById");
 
 const router = express.Router();
 
@@ -60,7 +64,7 @@ router.patch("/Destination/:destinationId", patchDestinationById);
 
 router.post("/Destination", postDestination);
 
-// inclusive
+// Inclusive
 
 router.get("/Inclusives", getAllInclusive);
 
@@ -71,5 +75,17 @@ router.post("/Inclusive", postInclusive);
 router.patch("/Inclusive/:inclusiveId", patchInclusiveById);
 
 router.delete("Inclusive/:inclusiveId", deleteInclusiveById);
+
+// Bookings
+
+router.get("/Booking/:bookingId", getBookingById);
+
+router.get("/Bookings", getAllCustomers);
+
+router.delete("/Booking/:bookingId", deleteBookingById);
+
+router.post("/Booking", postBooking);
+
+router.patch("/Booking/:bookingId", patchBookingById);
 
 module.exports = router;

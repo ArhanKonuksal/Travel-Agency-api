@@ -1,4 +1,4 @@
-const removeInclusiveById = require("~root/actions/Inclusives/removeInclusiveById");
+const removeInclusiveById = require("~root/actions/Inclusive/removeInclusiveById");
 const handleAPIError = require("~root/utils/handleAPIError");
 
 const deleteInclusiveById = async (req, res) => {
