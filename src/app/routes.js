@@ -48,7 +48,7 @@ router.get("/Customers", getAllCustomers);
 
 router.get("/Customer/:customerId", getCustomerById);
 
-router.post("/Customer", postCustomer); //çalışmaz
+router.post("/Customer", postCustomer);
 
 router.patch("/Customer/:customerId", patchCustomerById);
 
@@ -72,7 +72,7 @@ router.get("/Inclusives", getAllInclusive);
 
 router.get("/Inclusive/:inclusiveId", getInclusiveById);
 
-router.post("/Inclusive", postInclusive); //çalışmaz
+router.post("/Inclusive", postInclusive);
 
 router.patch("/Inclusive/:inclusiveId", patchInclusiveById);
 
@@ -84,7 +84,7 @@ router.get("/Bookings", getAllBookings);
 
 router.get("/Booking/:bookingId", getBookingById);
 
-router.post("/Booking", postBooking); //çalışmaz
+router.post("/Booking", postBooking);
 
 router.patch("/Booking/:bookingId", patchBookingById);
 
