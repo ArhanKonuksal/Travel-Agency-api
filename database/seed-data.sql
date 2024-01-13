@@ -55,6 +55,9 @@ VALUES("Dubai", "United Arab Emirates", "City of Skyscrapers", 2200.40);
 INSERT INTO destinations (destination_name, destination_location, description, price)
 VALUES("Cape Town", "South Africa", "Mother City", 1750.90);
 
+INSERT INTO destinations (destination_name, destination_location, description, price)
+VALUES("Bali", "Indonesia", "Island of Gods", 1400.30);
+
 
 INSERT INTO customers (first_name, last_name, email, phone_number)
 VALUES ("Aral", "Hudaoglu", "aral.hudaoglu@gmail.com", "05338322717");

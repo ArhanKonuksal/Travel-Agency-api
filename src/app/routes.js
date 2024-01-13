@@ -26,6 +26,7 @@ const postBooking = require("./controllers/Bookings/postBooking");
 const deleteBookingById = require("./controllers/Bookings/deleteBookingById");
 const getBookingById = require("./controllers/Bookings/getBookingById");
 const patchBookingById = require("./controllers/Bookings/patchBookingById");
+const getAllBookings = require("./controllers/Bookings/getAllBookingsById");
 
 const router = express.Router();
 
@@ -47,22 +48,23 @@ router.get("/Customers", getAllCustomers);
 
 router.get("/Customer/:customerId", getCustomerById);
 
-router.post("/Customer", postCustomer);
+router.post("/Customer", postCustomer); //çalışmaz
 
 router.patch("/Customer/:customerId", patchCustomerById);
 
 router.delete("/Customer/:customerId", deleteCustomerById);
 
 // Desinations
+
 router.get("/Destinations", getAllDestinations);
 
 router.get("/Destination/:destinationId", getDestinationById);
 
-router.delete("/Destination/:destinationId", deleteDestinationById);
+router.post("/Destination", postDestination);
 
 router.patch("/Destination/:destinationId", patchDestinationById);
 
-router.post("/Destination", postDestination);
+router.delete("/Destination/:destinationId", deleteDestinationById);
 
 // Inclusive
 
@@ -70,7 +72,7 @@ router.get("/Inclusives", getAllInclusive);
 
 router.get("/Inclusive/:inclusiveId", getInclusiveById);
 
-router.post("/Inclusive", postInclusive);
+router.post("/Inclusive", postInclusive); //çalışmaz
 
 router.patch("/Inclusive/:inclusiveId", patchInclusiveById);
 
@@ -78,14 +80,14 @@ router.delete("Inclusive/:inclusiveId", deleteInclusiveById);
 
 // Bookings
 
+router.get("/Bookings", getAllBookings);
+
 router.get("/Booking/:bookingId", getBookingById);
 
-router.get("/Bookings", getAllCustomers);
-
-router.delete("/Booking/:bookingId", deleteBookingById);
-
-router.post("/Booking", postBooking);
+router.post("/Booking", postBooking); //çalışmaz
 
 router.patch("/Booking/:bookingId", patchBookingById);
+
+router.delete("/Booking/:bookingId", deleteBookingById);
 
 module.exports = router;
